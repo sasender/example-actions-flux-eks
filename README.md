@@ -45,6 +45,10 @@ For _pushes_ to the default branch (`master`), in addition to the above, the wor
 
 Flux watches ECR for changes to the image listed in our [deployment configuration](manifests/deployment.yml). When it detects a change, it updates the EKS cluster with the new image, no manual `kubectl apply` needed!
 
+## Contributions
+
+We welcome contributions! See [how to contribute](CONTRIBUTING.md).
+
 ## License
 
 [MIT](LICENSE)
