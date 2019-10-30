@@ -43,8 +43,8 @@ For _pushes_ to the default branch (`master`), in addition to the above, the wor
 
 ## Beyond the workflow
 
-Flux watches ECR for changes to the image listed in our [deployment configuration](manifests.deployment.yml). When it detects a change, it updates the EKS cluster with the new image, no manual `kubectl apply` needed!
+Flux watches ECR for changes to the image listed in our [deployment configuration](manifests/deployment.yml). When it detects a change, it updates the EKS cluster with the new image, no manual `kubectl apply` needed!
 
 ## License
 
-[MIT](LICENSE).
+[MIT](LICENSE)
