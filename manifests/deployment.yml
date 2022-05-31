@@ -20,9 +20,9 @@ spec:
       containers:
       - name: aws-example-octodex
         # image: 00000000000000.dkr.ecr.my-region.amazonaws.com/example-eks:tag
-        image: 204415123180.dkr.ecr.us-east-1.amazonaws.com/example-eks:master-17d4dcd
+        image: nginx:latest
         ports:
-        - containerPort: 5000
+        - containerPort: 80
         resources:
           requests:
             cpu: 250m
