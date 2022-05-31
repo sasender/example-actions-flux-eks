@@ -6,7 +6,6 @@ name: CI
 on:
   push:
     paths:
-    - app/**
     branches: [ master ]
 jobs:
   build:
