@@ -1,10 +1,7 @@
 # build.yml
 on:
   push:
-    paths:
-    - app/**
-
-
+  
 name: Build and Push to ECR
 
 # https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html
