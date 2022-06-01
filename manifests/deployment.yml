@@ -1,30 +1,29 @@
----
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
+  creationTimestamp: null
+  labels:
+    app: aws-example-octodex
   name: aws-example-octodex
   annotations:
-    fluxcd.io/automated: "true"
+        fluxcd.io/automated: "true"
 spec:
   replicas: 1
-  strategy:
-    rollingUpdate:
-      maxSurge: 1
-      maxUnavailable: 1
-  minReadySeconds: 5
+  selector:
+    matchLabels:
+      app: aws-example-octodex
+  strategy: {}
   template:
     metadata:
+      creationTimestamp: null
       labels:
         app: aws-example-octodex
     spec:
       containers:
-      - name: aws-example-octodex
-        # image: 00000000000000.dkr.ecr.my-region.amazonaws.com/example-eks:tag
-        image: 204415123180.dkr.ecr.us-east-1.amazonaws.com/example-eks:master-414c2f3
+      - image: 204415123180.dkr.ecr.us-east-1.amazonaws.com/example-eks:master-bf23590
+        name: aws-example-octodex
+        imagePullPolicy: Always
+        resources: {}
         ports:
-        - containerPort: 5000
-        resources:
-          requests:
-            cpu: 250m
-          limits:
-            cpu: 500m
+          - containerPort: 5000
+status: {}
