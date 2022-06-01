@@ -1,12 +1,13 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp: null
+  creationTimestamp:
   labels:
     app: aws-example-octodex
   name: aws-example-octodex
   annotations:
-        fluxcd.io/automated: "true"
+    fluxcd.io/automated: "true"
 spec:
   replicas: 1
   selector:
@@ -15,15 +16,15 @@ spec:
   strategy: {}
   template:
     metadata:
-      creationTimestamp: null
+      creationTimestamp:
       labels:
         app: aws-example-octodex
     spec:
       containers:
-      - image: 204415123180.dkr.ecr.us-east-1.amazonaws.com/example-eks:master-bf23590
+      - image: 204415123180.dkr.ecr.us-east-1.amazonaws.com/example-eks:master-b222480
         name: aws-example-octodex
         imagePullPolicy: Always
         resources: {}
         ports:
-          - containerPort: 5000
+        - containerPort: 5000
 status: {}
