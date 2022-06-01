@@ -21,7 +21,7 @@ spec:
         app: aws-example-octodex
     spec:
       containers:
-      - image: 204415123180.dkr.ecr.us-east-1.amazonaws.com/example-eks:master-3eac2e5
+      - image: 204415123180.dkr.ecr.us-east-1.amazonaws.com/example-eks:master-749b5d1
         name: aws-example-octodex
         imagePullPolicy: Always
         resources: {}
