@@ -42,7 +42,7 @@ jobs:
         #docker build \
          docker build -t $CONTAINER_IMAGE \
          docker build -t $GITHUB_REPOSITORY:$GITHUB_SHA \
-         docker build -t 204415123180.dkr.ecr.us-east-1.amazonaws.com/$container_image ./app
+         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG . 
          #docker push 204415123180.dkr.ecr.us-east-1.amazonaws.com/gitops:latest
           
        # Only push to registry on master
