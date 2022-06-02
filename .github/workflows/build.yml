@@ -4,8 +4,8 @@
 name: CI
 on:
  pull_request:
-   paths:
-   - app/
+  paths:
+  - app/**
   
   #push:
     branches: [ master ]
