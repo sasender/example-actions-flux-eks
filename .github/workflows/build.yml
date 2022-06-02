@@ -42,7 +42,8 @@ jobs:
         #docker build \
          docker build -t $CONTAINER_IMAGE \
          docker build -t $GITHUB_REPOSITORY:$GITHUB_SHA \
-         docker build -t $AWS_ACCOUNT_ID.dkr.ecr.$aws-region.amazonaws.com/$CONTAINER_IMAGE ./app
+         docker build -t $aws-account_id.dkr.ecr.$aws-region.amazonaws.com/$container_image ./app
+         #docker push 204415123180.dkr.ecr.us-east-1.amazonaws.com/gitops:latest
           
        # Only push to registry on master
     - name: Push
