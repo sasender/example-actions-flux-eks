@@ -3,8 +3,11 @@
 
 name: CI
 on:
-  pull_request:
-  push:
+ pull_request:
+  paths:
+   - app/
+  
+  #push:
     branches: [ master ]
 jobs:
   build:
