@@ -50,7 +50,7 @@ jobs:
         #docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG ./app .
         
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG . 
-        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+         #docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
            
          #docker push 204415123180.dkr.ecr.us-east-1.amazonaws.com/gitops:latest
           
@@ -59,6 +59,6 @@ jobs:
       if: github.ref == 'refs/heads/master'
       run: |
         # Push image to AWS ECR
-        docker push $AWS_ACCOUNT_ID.dkr.ecr.$aws-region.amazonaws.com/$CONTAINER_IMAGE    
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG    
         
         
