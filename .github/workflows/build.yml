@@ -31,7 +31,7 @@ jobs:
       id: build-image
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        ECR_REPOSITORY: example-eks
+        ECR_REPOSITORY: gitops
         IMAGE_TAG: latest
 
       run: |
