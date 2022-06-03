@@ -2,11 +2,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp:
+  creationTimestamp: null
   labels:
     app: aws-example-octodex
   name: aws-example-octodex
-  namespace:  flux
+  #namespace:  flux
   annotations:
     fluxcd.io/automated: "true"
     fluxcd.io/tag.podinfod: semver:~1.3
@@ -23,7 +23,7 @@ spec:
         app: aws-example-octodex
     spec:
       containers:
-      - image: nginx:latest
+      - image: 204415123180.dkr.ecr.us-east-1.amazonaws.com/podman:9269914df89e89cd53e0c45385de584c58e491c6
         name: aws-example-octodex
         imagePullPolicy: Always
         resources: {}
