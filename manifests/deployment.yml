@@ -6,7 +6,7 @@ metadata:
   labels:
     app: aws-example-octodex
   name: aws-example-octodex
-  #namespace:  flux
+  namespace: development
   annotations:
     fluxcd.io/automated: "true"
     fluxcd.io/tag.podinfod: semver:~1.3
