@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp: null
+  creationTimestamp:
   labels:
     app: aws-example-octodex
   name: aws-example-octodex
@@ -23,7 +23,7 @@ spec:
         app: aws-example-octodex
     spec:
       containers:
-      - image: 204415123180.dkr.ecr.us-east-1.amazonaws.com/podman:9269914df89e89cd53e0c45385de584c58e491c6
+      - image: 204415123180.dkr.ecr.us-east-1.amazonaws.com/podman:e17abdfbe85f09d3bca39a549a21a5e6a3d9d850
         name: aws-example-octodex
         imagePullPolicy: Always
         resources: {}
