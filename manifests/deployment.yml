@@ -23,7 +23,7 @@ spec:
         app: aws-example-octodex
     spec:
       containers:
-      - image: 204415123180.dkr.ecr.us-east-1.amazonaws.com/podman:e17abdfbe85f09d3bca39a549a21a5e6a3d9d850
+      - image: 204415123180.dkr.ecr.us-east-1.amazonaws.com/podman:9f485bc70033f27c7d52da4a632d50642b52f7b1
         name: aws-example-octodex
         imagePullPolicy: Always
         resources: {}
